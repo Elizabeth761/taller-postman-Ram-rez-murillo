@@ -5,7 +5,7 @@ Elizabeth Ramirez Murilo
 Identificación: 1006293845
 Curso: Ingeniería de Software II — Cotecnova
 
-Marco conceptual
+# Marco conceptual
 
 • Que es una Api rest 
 son componentes de software que se puede comunicar diferentes aplicaciones entre si mediante protocolos de http y metodos de formatos de datos ayudando a dichas aplicaciones a modificar solicitar eliminar modificar y crear como si fuera un crud.
@@ -25,7 +25,7 @@ Fuente consultada:¿Qué es una API REST?
 https://cloud.google.com/discover/what-is-rest-api?hl=es
 
 
-Métodos HTTP
+# Métodos HTTP
 
 Método	  Operación CRUD	 Qué hace
 GET	      Consultar 	     Obtener información de una lista 
@@ -35,7 +35,7 @@ PATCH	  actualizar	     Cambiar datos
 DELETE	  Eliminar 	         Eliminar datos 
 
 
-Las familias de códigos de estado
+# Las familias de códigos de estado
 
 1xx (Informativos): el servidor recibió la solicitud y el proceso continúa todavía no es la respuesta final.
 ej:(100 Continue) el cliente puede continuar enviando los datos de la solicitud.
