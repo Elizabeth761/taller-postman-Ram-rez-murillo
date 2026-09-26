@@ -1,9 +1,7 @@
-# taller-postman-Ram-rez-murillo
-
 **Taller de APIs y Postman**
 **Elizabeth Ramirez Murilo**
-**Identificación: 1006293845**
-**Curso: Ingeniería de Software II — Cotecnova**
+**Identificación:** 1006293845
+**Curso:** Ingeniería de Software II — Cotecnova
 
 # Marco conceptual
 
@@ -54,8 +52,9 @@ ej: (404 Not Found): el endpoint o el recurso solicitado no existe.
 ej: (500 Internal Server Error): ocurrió un fallo interno o inesperado en el servidor.
 
 • ¿por qué se separan los errores 4xx de los 5xx? 
-el codigo 4xx muestra que el cliente debe de corregir algo ej: en la URL o los credenciales, permisos o el fomato de los datos.
-el codido 5xx el servidor o la paguina debe de mirar y corregir algo ej: error de la paguina ,mala configuracion, servicio no disponible o la base de datos. 
+- el codigo 4xx muestra que el cliente debe de corregir algo ej: en la URL o los credenciales, permisos o el fomato de los datos.
+
+- el codido 5xx el servidor o la paguina debe de mirar y corregir algo ej: error de la paguina ,mala configuracion, servicio no disponible o la base de datos. 
 
 Fuente consultada: codigos de estado
 https://www.rfc-editor.org/rfc/rfc9110.html
