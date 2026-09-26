@@ -71,5 +71,5 @@ se llama prueba de valores de limite Consiste en probar justo en el borde entre 
 
 - ¿Por qué se dice que los defectos se concentran ahí?
 
-Porque los errores de programación más comunes ocurren en las condiciones que definen ese límite  ej: un desarrollador que escribe `id <= 100` en vez de `id < 100` (o viceversa) provocaría que el id 100 fallara o que el 101 funcionara cuando no debería Probar solo con valores intermedios (como el id 50) no detectaría ese tipo de error porque ese id sería valido sin importar si la condición esta bien o mal escrita Los valores límite son justamente donde ese tipo de error se manifiesta.
+Porque los errores de programación mas comunes ocurren en las condiciones que definen ese límite ej: un desarrollador escribe `id <= 100` en vez de `id < 100` (o viceversa) provoca que el id 100 fallara o que el 101 funcionara cuando no debería Probar solo con valores intermedios (como el id 50) que no detecta ese tipo de error porque ese id sería valido sin importar si la condición esta bien o mal escrita Los valores límite son justamente donde ese tipo de error se manifiesta.
 
