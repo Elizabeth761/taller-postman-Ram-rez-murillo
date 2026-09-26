@@ -99,20 +99,25 @@ PATCH ya que solo se necesita modificar algunos elementos ej: titulo sin arriesg
 
 # Exploracion de recursos
 
-se utiliza los siguientes recursos 
+se utilizo los siguientes recursos 
 
 - GET /users
 • Código: 200 OK
+
 • Estructura: id, name, username, email, y un objeto address anidado (street, suite, city, zipcode, geo).
 
 - GET /albums
+
 • Código: 200 OK
+
 • Estructura: userId, id, title.
 
 - Ruta anidada: GET /posts/1/comments
+
 •Código: 200 OK
+
 • Devuelve solo los comentarios del post 1 (cada uno con postId: 1, id, name, email, body) Confirma que la API filtra los comentarios según el post al que pertenecen.
 
 - ¿Cómo deduje la estructura de estas URLs?
 
-Sigue el patrón típico de una API REST: cuando un recurso "pertenece" a otro (los comentarios pertenecen a un post), se anida como /recurso-padre/{id}/recurso-hijo. Esto se confirma con el campo postId presente en cada comentario, que conecta cada uno con su post correspondiente.
+Sigui el patrón típico de una API REST: cuando un recurso pertenece a otro (los comentarios pertenecen a un post) se anida como /recurso-padre/{id}/recurso-hijo esto confirmando con el campo postId presente en cada comentario que conecta en cada uno con su post correspondiente.
