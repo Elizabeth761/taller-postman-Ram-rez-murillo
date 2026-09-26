@@ -102,19 +102,16 @@ PATCH ya que solo se necesita modificar algunos elementos ej: titulo sin arriesg
 se utiliza los siguientes recursos 
 
 - GET /users
-
-- Código: 200 OK
-- Estructura: id, name, username, email, y un objeto address anidado (street, suite, city, zipcode, geo).
+• Código: 200 OK
+• Estructura: id, name, username, email, y un objeto address anidado (street, suite, city, zipcode, geo).
 
 - GET /albums
-
-- Código: 200 OK
-- Estructura: userId, id, title.
+• Código: 200 OK
+• Estructura: userId, id, title.
 
 - Ruta anidada: GET /posts/1/comments
-
-- Código: 200 OK
-- Devuelve solo los comentarios del post 1 (cada uno con postId: 1, id, name, email, body) Confirma que la API filtra los comentarios según el post al que pertenecen.
+•Código: 200 OK
+• Devuelve solo los comentarios del post 1 (cada uno con postId: 1, id, name, email, body) Confirma que la API filtra los comentarios según el post al que pertenecen.
 
 - ¿Cómo deduje la estructura de estas URLs?
 
