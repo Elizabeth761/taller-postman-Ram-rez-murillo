@@ -24,25 +24,29 @@ GET/posts/.
 un resultado de 100 publicaciones.
 * Qué campos tiene cada elemento: presenta los mismos 4 campos de get post/1 userId, id, title y body
 
+
 # ¿en qué se diferencian los criterios de aceptación cuando pides un recurso y cuando pides una colección?
 
-* Recurso 
+* Recurso: 
 se valida la existencia de una entidad o los comportamientos funcionales de un elemento u usurio 
-* Coleccion
+* Coleccion:
 se valida la existencia de la lista y la correcta entrega de un cojuntos de elementos ej: catalogo de productos
 
 
 # investigaciion del caso de prueba error 404 
 
-* ¿qué pasaría si esa misma petición hubiera devuelto 200 con un cuerpo vacío? 
+- ¿qué pasaría si esa misma petición hubiera devuelto 200 con un cuerpo vacío?
+
 cuando se le pidio que hiciera dicha peticion que no existe el comportamiento de salida del postman fue dar 404 not found diciendonos que claramente que hay un error porque no existe
 en cambio cuando la salida espereada respondio con 200 ok con un cuerpo vacio el programa interpreto que la 
 peticion fue exitosa y que hay algo cuando no paso nada y sigue en blanco el sistema nos esta diciendo que todo esta bien cuando en realidad hubo un problema eso prodria demostrar que es un error peligroso porque nos puedes llegar a confundir ya sea si una la app, pagina o aplicacion demuestra que todo esta bien sin ningún mensaje de error
 
-* ¿Sería un defecto?
+- ¿Sería un defecto?
+
 no seria un defecto ya que esto define el comportamiento en salida de una api si no esta configurada para salir
 demostrando que el recuso /posts/9999 no existe y los resultado tanto como de salida como de ingresando siempre va ser 
 404 not found ya que esto es una regla estandar de http
+
 
 # POST /posts (creación de un recurso)
 
@@ -56,10 +60,12 @@ para que saliera los siguiente.
 con el codigo odtenido 201 al hacer las 5 peticiones 
 
 • ¿qué observaste? 
+
 al ejecutar la peticion 5 veces seguidas salia lo mismo sin ningun cambio o repeticion o aunmento se quedaba
 ahi estatico que se supone que POST debe de crear un nuevo id distinto
 
 • ¿Por qué crees que ocurre eso? 
+
 Porque https://jsonplaceholder.typicode.com/posts/ es una API de práctica que simula tener datos reales detras cuando recibe ordenes url desde la aplicacion de potsman calculando que id le va a tocar al siguiente recurso y lo devuelve en la respuesta pero nunca guarda el nuevo post en ningún lado sin importar cuántas veces se repita la petición el resultado simulado es siempre igual.
 
 • ¿Cómo comprobarías, en una API real, que el recurso se creó de verdad?
@@ -69,29 +75,22 @@ Porque https://jsonplaceholder.typicode.com/posts/ es una API de práctica que s
 - Repitiendo el POST varias veces y verificando que cada vez se genera un **id distinto** (si el id se repite como en JSONPlaceholder es señal de que no se está persistiendo realmente).
 
 
-
-
-
-
-
 # Las diferencias entre PUT y PATCH
 
-PUT: al pedir un recurso la api esta actualizando los datos por la parte del body (raw) a travez de la peticion que 
-nosotros le pedimos que hiciera PUT https://jsonplaceholder.typicode.com/posts/1 
+- ¿qué diferencia encontraste entre ambas respuestas? 
+se envio el mismo url que fue https://jsonplaceholder.typicode.com/posts/1 a ambas peticiones un devolvieron un
+campo con el codigo 200 ok y texto que se escribio en el body
 
 {
   "title": "Cuentos del Olimpo"
 }
 
-y el servidor me esta devolviendo con el codigo 200 y { userId, id, title, body } en modo json con los datos de 
-ese elemento
+PUT: al pedir una respueta la api solo nos dio { "title": "Cuentos del Olimpo", "id": 1 }  en modo json con los datos de ese elemento los campos userID y body ya no estaban en la respuesta esto reemplaza el recurso completo si no se envia todos los campos los que faltan se pierden esto podria borrar los datos de la base de datos.
 
-{
-  "title": "Cuentos del Olimpo",
-  "id": 1
-}
+PATCH: al pedir una respueta la api solo nos dio { userId, id, title, body: "..." } en modo json con los datos de 
+ese elemento devolvio el recuso completo conservando el userID y el body y solo modifica los campos que le envíamos y deja el resto intacto
 
 
-PATCH: al pedir  que contiene múltiples objetos con la misma estructura.
+- ¿Cuál usarías para corregir un error de escritura en un solo campo, y por qué?
 
-PATCH https://jsonplaceholder.typicode.com/posts/1
+PATCH ya que solo se necesita modificar algunos elementos ej: titulo sin arriesgar de borrar accidentalmente el resto de la informacion 
