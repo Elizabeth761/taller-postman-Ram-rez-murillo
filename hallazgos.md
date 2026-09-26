@@ -121,3 +121,37 @@ se utilizo los siguientes recursos
 - ¿Cómo deduje la estructura de estas URLs?
 
 Sigui el patrón típico de una API REST: cuando un recurso pertenece a otro (los comentarios pertenecen a un post) se anida como /recurso-padre/{id}/recurso-hijo esto confirmando con el campo postId presente en cada comentario que conecta en cada uno con su post correspondiente.
+
+
+# Pruebas adicionales con pm.expect (ejecutadas en PATCH /posts/1)
+
+- Prueba 1: Verificar que existe el campo 'title'
+pm.test("El post tiene el campo 'title'", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("title");
+});
+
+Que verifica: que la respuesta tenga la propiedad "title" definida.
+Resultado: PASSED
+
+- Prueba 2: Verificar el tiempo de respuesta
+
+pm.test("El tiempo de respuesta es menor a 1000 ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(1000);
+});
+
+Que verifica: que el servidor responda en menos de 1 segundo.
+Resultado: PASSED
+
+- Prueba 3: Verificar el tipo de dato de un campo
+
+pm.test("El campo 'id' es de tipo number", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.id).to.be.a("number");
+});
+
+Que verifica: que el campo id sea numerico y no un texto.
+Resultado: PASSED
+
+- Nota / aprendizaje
+Al escribir las primeras versiones de estas pruebas intente aplicarlas creyendo que la respuesta era un arreglo (usando jsonData[0] y jsonData.length) pero fallaron porque la petición PATCH /posts/1 devuelve un objeto individual no un arreglo Esto confirmó que las pruebas automáticas deben adaptarse a la estructura real de la respuesta de cada endpoint y no se pueden reutilizar sin ajustes entre un endpoint que devuelve un objeto y uno que devuelve una colección.
