@@ -27,12 +27,13 @@ https://cloud.google.com/discover/what-is-rest-api?hl=es
 
 # Métodos HTTP
 
-Método	  Operación CRUD	 Qué hace
-GET	      Consultar 	     Obtener información de una lista 
-POST	  crear	             Registrar datos
-PUT	      modificar	         Modificar los datos
-PATCH	  actualizar	     Cambiar datos 
-DELETE	  Eliminar 	         Eliminar datos 
+| Método | Operación CRUD | Qué hace |
+| :--- | :--- | :--- |
+| **GET** | Consultar | Obtener información de una lista |
+| **POST** | Crear | Registrar datos |
+| **PUT** | Modificar | Modificar los datos |
+| **PATCH** | Actualizar | Cambiar datos |
+| **DELETE** | Eliminar | Eliminar datos |
 
 
 # Las familias de códigos de estado
