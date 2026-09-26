@@ -154,4 +154,5 @@ Que verifica: que el campo id sea numerico y no un texto.
 Resultado: PASSED
 
 - Nota / aprendizaje
+
 Al escribir las primeras versiones de estas pruebas intente aplicarlas creyendo que la respuesta era un arreglo (usando jsonData[0] y jsonData.length) pero fallaron porque la petición PATCH /posts/1 devuelve un objeto individual no un arreglo Esto confirmó que las pruebas automáticas deben adaptarse a la estructura real de la respuesta de cada endpoint y no se pueden reutilizar sin ajustes entre un endpoint que devuelve un objeto y uno que devuelve una colección.
