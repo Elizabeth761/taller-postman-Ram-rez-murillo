@@ -33,7 +33,7 @@ se valida la existencia de una entidad o los comportamientos funcionales de un e
 se valida la existencia de la lista y la correcta entrega de un cojuntos de elementos ej: catalogo de productos
 
 
-# investigaciion del caso de prueba error 404 
+# investigación del caso de prueba error 404 
 
 - ¿qué pasaría si esa misma petición hubiera devuelto 200 con un cuerpo vacío?
 
@@ -77,7 +77,8 @@ Porque https://jsonplaceholder.typicode.com/posts/ es una API de práctica que s
 
 # Las diferencias entre PUT y PATCH
 
-- ¿qué diferencia encontraste entre ambas respuestas? 
+- ¿qué diferencia encontraste entre ambas respuestas?
+ 
 se envio el mismo url que fue https://jsonplaceholder.typicode.com/posts/1 a ambas peticiones un devolvieron un
 campo con el codigo 200 ok y texto que se escribio en el body
 
