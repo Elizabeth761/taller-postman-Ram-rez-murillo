@@ -1,9 +1,7 @@
-**Taller de APIs y Postman**
+#Taller de APIs y Postman
 
 **Elizabeth Ramirez Murilo**
-
 **Identificación:** 1006293845
-
 **Curso:** Ingeniería de Software II — Cotecnova
 
 # Marco conceptual
