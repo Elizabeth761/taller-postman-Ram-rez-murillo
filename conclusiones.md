@@ -66,6 +66,8 @@ POST: al hacerlo varias veces seguidas al ejecutar la misma petición el servido
 
 - Primer id que devuelve 404: 101
 
+los que devuelven los arreglos de 100 elemetos son GET Y POSTS.
+
 - ¿cómo se llama ese tipo de caso de prueba? 
 
 se llama prueba de valores de limite Consiste en probar justo en el borde entre lo que es válido y lo que no en lugar de probar solo casos cómodos en medio del rango.
