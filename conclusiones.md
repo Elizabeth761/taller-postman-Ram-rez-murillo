@@ -37,9 +37,11 @@ POST: al hacerlo varias veces seguidas al ejecutar la misma petición el servido
 
 - Valor observado: application/json; charset=utf-8
 
-- Qué significa: indica el formato del cuerpo de la respuesta — en este caso json codificado en UTF-8.
+- Qué significa: indica el formato del cuerpo de la respuesta json codificado en UTF-8.
 
-- Por qué es importante al probar una API: el cliente necesita saber como interpretar los datos recibidos antes de procesarlos si esta cabecera dijera algo distinto ej:(`text/html`) pero el body fuera json cualquier programa que intente parsearlo como json fallaría aunque el código de respuesta fuera 200 ok Como tester verificar el tipo de contenido que permite detectar inconsistencias entre lo que el servidor dice que envía y lo que realmente envía.
+- Por qué es importante al probar una API: 
+
+Se necesita saber como interpretar los datos recibidos antes de procesarlos si esta cabecera dijera algo distinto ej:(`text/html`) pero el body fuera json cualquier programa que intente parsearlo como json fallaría aunque el código de respuesta fuera 200 ok Como tester verificar el tipo de contenido que permite detectar inconsistencias entre lo que el servidor dice que envía y lo que realmente envía.
 
 2. Cache-Control
 

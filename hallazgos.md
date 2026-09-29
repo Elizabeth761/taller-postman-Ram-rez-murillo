@@ -29,6 +29,7 @@ un resultado de 100 publicaciones.
 
 * Recurso: 
 se valida la existencia de una entidad o los comportamientos funcionales de un elemento u usurio 
+
 * Coleccion:
 se valida la existencia de la lista y la correcta entrega de un cojuntos de elementos ej: catalogo de productos
 

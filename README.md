@@ -9,7 +9,7 @@
 # Marco conceptual
 
 • Que es una Api rest 
-son componentes de software que se puede comunicar diferentes aplicaciones entre si mediante protocolos de http y metodos de formatos de datos ayudando a dichas aplicaciones a modificar solicitar eliminar modificar y crear como si fuera un crud.
+son componentes de software que se puede comunicar diferentes aplicaciones entre si mediante protocolos de http y metodos de formatos de datos ayudando a dichas aplicaciones a modificar solicitar eliminar y crear como si fuera un crud.
 
 • Qué significa que una API sea «REST»
 que esta diseñada a los principios de diseño de estilo arquitectonico para la organizacion de informacion de datos mediante urls y operaciones de hppt
@@ -17,7 +17,7 @@ como si se fuera hacer una solicitud de pedido.
 
 • Qué es un recurso y qué es un endpoint
 recurso: cualquier dato o odjecto u elemento de informacion que se pueda consutar o modificar atravez del sistema 
-endpoint: es el punto de acceso de la api en donde se pueda  conectar con las urls de las wed que actua como comunicador entre el cliente y el sevidor.
+endpoint: es el punto de acceso de la api en donde se pueda conectar con las urls de las wed que actua como comunicador entre el cliente y el sevidor.
 
 • ejemplo de una aplicación que uses a diario y que dependa de APIs  
 whatsApp que utiliza Aips de geolocalizacion y de almacenamiento en la nube de copias de seguridad de informacion y ubicacion (google drive y maps).  
