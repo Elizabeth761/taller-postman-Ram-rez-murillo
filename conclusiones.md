@@ -26,7 +26,8 @@ Fuentes Consultadas
 
 # Peticiones con el PUT y POST
 
-PUT: al hacerlo varias veces seguidas el resultado siguie siendo el mismo y no cambia las repeticiones.
+PUT: al hacerlo varias veces seguidas el resultado siguie siendo el mismo y no cambia las repeticiones solo cambia 
+el tiempo de espera. 
 
 POST: al hacerlo varias veces seguidas al ejecutar la misma petición el servidor debería crear un recurso nuevo cada vez con un id distinto incremental (101, 102, 103...) confirmardo que no es idempotente.
 
@@ -39,9 +40,7 @@ POST: al hacerlo varias veces seguidas al ejecutar la misma petición el servido
 
 - Qué significa: indica el formato del cuerpo de la respuesta json codificado en UTF-8.
 
-- Por qué es importante al probar una API: 
-
-Se necesita saber como interpretar los datos recibidos antes de procesarlos si esta cabecera dijera algo distinto ej:(`text/html`) pero el body fuera json cualquier programa que intente parsearlo como json fallaría aunque el código de respuesta fuera 200 ok Como tester verificar el tipo de contenido que permite detectar inconsistencias entre lo que el servidor dice que envía y lo que realmente envía.
+- Por qué es importante al probar una API: Se necesita saber como interpretar los datos recibidos antes de procesarlos si esta cabecera dijera algo distinto ej:(`text/html`) pero el body fuera json cualquier programa que intente parsearlo como json fallaría aunque el código de respuesta fuera 200 ok como testear verificar el tipo de contenido que permite detectar inconsistencias entre lo que el servidor dice que envía y lo que realmente envía.
 
 2. Cache-Control
 

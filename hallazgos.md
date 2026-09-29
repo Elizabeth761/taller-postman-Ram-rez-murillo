@@ -103,6 +103,7 @@ PATCH ya que solo se necesita modificar algunos elementos ej: titulo sin arriesg
 se utilizo los siguientes recursos 
 
 - GET /users
+
 • Código: 200 OK
 
 • Estructura: id, name, username, email, y un objeto address anidado (street, suite, city, zipcode, geo).
